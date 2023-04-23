@@ -39,7 +39,7 @@ export default function Home() {
           Get more information
         </button>
         <p>
-          "Made in France No advance payment Shipped to your fans"
+          Made in France No advance payment Shipped to your fans
         </p>
       </div>
 
