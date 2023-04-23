@@ -27,19 +27,19 @@ export default function Home() {
       </div>
 
       <div className="z-10 w-full max-w-5xl">
-        <h1 className={`text-2xl font-bold`}>
+        <h1 className="text-2xl font-bold">
           Your fans deserve
           Your health supplements
         </h1>
         <p>
-        Design health supplements produced in France, under your own brand.
-        Pay only when sold, and we ship them to your fans.
+          Design health supplements produced in France, under your own brand.
+          Pay only when sold, and we ship them to your fans.
         </p>
         <button className="rounded-full slate-800">
           Get more information
         </button>
         <p>
-          Made in France - No advance payment - Shipped to your fans
+          "Made in France No advance payment Shipped to your fans"
         </p>
       </div>
 
@@ -56,10 +56,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className={`mb-3 text-2xl font-semibold`}>
+          <h4 className="mb-3 text-2xl font-semibold">
             Accredited supplements
           </h4>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
             Locally sourced and manufactured in France. Our health supplements follow strict guidelines for high quality products
           </p>
         </a>
@@ -69,11 +69,11 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className={`mb-3 text-2xl font-semibold`}>
+          <h4 className="mb-3 text-2xl font-semibold">
             Your Product. Your brand.
           </h4>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Choose health supplements, the packaging and design. We'll help tailor it to your community.
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
+            Choose health supplements, the packaging and design. We will help tailor it to your community.
           </p>
         </a>
 
@@ -82,10 +82,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className={`mb-3 text-2xl font-semibold`}>
-            Sell before buying{' '}
+          <h4 className="mb-3 text-2xl font-semibold">
+            Sell before buying
           </h4>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
             To change
           </p>
         </a>
@@ -96,10 +96,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2 className="mb-3 text-2xl font-semibold">
             We ship your products
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
             To change
           </p>
         </a>
