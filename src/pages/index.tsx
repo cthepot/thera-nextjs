@@ -9,25 +9,27 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between ${public_sans.className}`}
     >
-      <div className="w-full max-w-5xl items-center justify-between text-sm lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/thera.svg"
-              alt="Thera Logo"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <header className="w-full py-4 px-6 bg-white lg:px-0">
+      <div className="max-w-5xl mx-auto flex items-center justify-between">
+        <a
+          href="/"
+          className="flex items-center"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/thera.svg"
+            alt="Thera Logo"
+            width={100}
+            height={24}
+            priority
+          />
+        </a>
+        {/* Add other navigation elements here */}
       </div>
+    </header>
 
-      <div className="w-full max-w-5xl mt-20 mb-10">
+      <div className="w-full max-w-5xl mt-20 mb-10 px-4 lg:px-0">
         <div>
           <h1 className= "mb-3">
             <span className='text-blue-500'>Your</span> fans deserve<br/>
@@ -57,55 +59,50 @@ export default function Home() {
       </div>
 
 
-      <div className='bg-white w-full py-5'>
+      <div className='bg-white w-full py-5 px-4 lg:px-0'>
         <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
           <a
-            className="group rounded-lg border border-transparent px-5 py-4"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="group rounded-lg border border-transparent px-5 py-4 text-center lg:text-left"
           >
-            <h4 className="mb-3 text-xl font-semibold">
-              Accredited products
-            </h4>
-            <p className="m-0 max-w-[30ch] text-sm opacity-80">
-              Locally sourced and manufactured in France. Our health supplements follow strict guidelines for high quality products.
-            </p>
+            <div>
+              <h4 className="mb-3 text-xl font-semibold">
+                Accredited products
+              </h4>
+              <p className="m-0 w-full md:w-3/4 lg:max-w-[30ch] xl:max-w-[30ch] text-sm opacity-80">
+                Our health supplements follow strict industry guidelines for high quality products.
+              </p>
+            </div>
           </a>
 
           <a
-            className="group rounded-lg border border-transparent px-5 py-4 transition-color"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="group rounded-lg border border-transparent px-5 py-4 text-center lg:text-left"
           >
             <h4 className="mb-3 text-xl font-semibold">
               Your brand design
             </h4>
-            <p className="m-0 max-w-[30ch] text-sm opacity-80">
+            <p className="m-0 w-full md:w-3/4 lg:max-w-[30ch] xl:max-w-[30ch] text-sm opacity-80">
               Select health supplements tailored to your community. We design the packaging that you want.
             </p>
           </a>
 
           <a
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="group rounded-lg border border-transparent px-5 py-4 text-center lg:text-left"
           >
             <h4 className="mb-3 text-xl font-semibold">
               Sell before paying
             </h4>
-            <p className="m-0 max-w-[30ch] text-sm opacity-80">
+            <p className="m-0 w-full md:w-3/4 lg:max-w-[30ch] xl:max-w-[30ch] text-sm opacity-80">
               No need to pay large orders and manage inventory. Pay only when you sold your products.
             </p>
           </a>
 
           <a
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors"
-            rel="noopener noreferrer"
+            className="group rounded-lg border border-transparent px-5 py-4 text-center lg:text-left"
           >
             <h2 className="mb-3 text-xl font-semibold">
               We ship your products
             </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-80">
+            <p className="m-0 w-full md:w-3/4 lg:max-w-[30ch] xl:max-w-[30ch] text-sm opacity-80">
               We package and fulfill orders to all of your customers individually to make your life eaier.
             </p>
           </a>
