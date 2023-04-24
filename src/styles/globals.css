@@ -20,14 +20,16 @@ body {
 
 h1 {
 
-  font-weight: 600;
-  font-size: 56px;
+  font-weight: 700;
+  font-size: 60px;
   line-height: 60px;
   letter-spacing: -0.05em;
 }
 
 h2 {
-  font-weight: 500;
-  font-size: 42px;
+  font-weight: 700;
+  font-size: 48px;
   line-height: 60px;
+  font-weight: 700;
+
 }

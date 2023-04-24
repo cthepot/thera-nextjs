@@ -7,7 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      textColor: {
+        'blue-primary': '#608FD3'
+      },
+      backgroundColor: {
+        'blue-primary': '#608FD3'
+      },
     },
     fontFamily: {
       'public-sans': ['Public Sans', 'sans-serif'],
