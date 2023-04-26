@@ -1,19 +1,27 @@
 import React from "react";
 
+type IconType = React.ComponentType<{ className?: string }>;
+
 interface CardProps {
   heading: string;
   description: string;
+  icon: IconType;
 }
 
-const Card : React.FC<CardProps> = ({heading, description}) => {
+const Card : React.FC<CardProps> = ({heading, description, icon: IconComponent }) => {
   return(
-      <div className="flex flex-col items-center px-5 py-4 lg:px-0">
-        <h4 className="mb-3 text-xl font-semibold lg:text-left">
-          {heading}
-        </h4>
-        <p className="m-0 w-full md:w-3/4 lg:max-w-[30ch] xl:max-w-[32ch] text-sm text-center lg:text-left opacity-80">
-          {description}
-        </p>
+      <div className="flex flex-col items-center py-4 lg:px-0">
+        <div className="items-start justify-center bg-gray-100 rounded-lg p-5 mr-5">
+          <div className="flex items-center mb-3">
+            <IconComponent className="inline w-6 mr-2" />
+            <h4 className="text-xl font-semibold text-left">
+              {heading}
+            </h4>
+          </div>
+          <p className="text-sm text-left opacity-80">
+            {description}
+          </p>
+        </div>
       </div>
   )
 }

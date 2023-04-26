@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Public_Sans } from 'next/font/google';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import Card from "../components/card";
+import { PaintBrushIcon, ClockIcon, ShoppingBagIcon} from "@heroicons/react/24/solid";
 
 const public_sans = Public_Sans({ subsets: ['latin'] })
 
@@ -10,7 +11,7 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between ${public_sans.className}`}
     >
-    <header className="w-full py-4 px-6 bg-white lg:px-0">
+    <header className="w-full py-4 px-6 lg:px-0">
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         <a
           href="/"
@@ -60,11 +61,25 @@ export default function Home() {
       </div>
 
 
-      <div className='bg-white w-full py-10 px-4 lg:px-0'>
-        <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-3 lg:text-left">
-            <Card heading = "Your brand" description = "Select health supplements tailored to your community. We design the packaging that you want."/>
-            <Card heading = "Pay later" description = "No need to pay large orders and manage inventory. Pay only when you sold your products."/>
-            <Card heading = "We ship" description = "We package and fulfill orders to all of your customers individually to make your life eaier."/>
+      <div className='bg-white w-full py-20'>
+        <div className= 'max-w-5xl px-4 lg:px-0 items-center mx-auto flex justify-between'>
+          <div className="grid lg:grid-cols-3">
+              <Card
+                heading = "Your brand"
+                description = "Select health supplements tailored to your community. We design the packaging that you want."
+                icon = {PaintBrushIcon}
+             />
+              <Card
+                heading = "Pay later"
+                description = "No need to pay large orders and manage inventory. Pay only when you sold your products."
+                icon = {ClockIcon}
+              />
+              <Card
+                heading = "We ship"
+                description = "We package and fulfill orders to all of your customers individually to make your life easier."
+                icon = {ShoppingBagIcon}
+              />
+            </div>
         </div>
       </div>
 
@@ -77,6 +92,10 @@ export default function Home() {
           Our ingredients are sourced following strict guidelines and high quality standards. <br/>
           All our products produced in France and under organic French or European labels.
         </p>
+      </div>
+
+      <div className ="">
+
       </div>
 
 
