@@ -8,14 +8,16 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        'blue-primary': '#608FD3'
+        'blue-primary': '#608FD3',
+        'gray-subtitle': '#333333'
       },
       backgroundColor: {
-        'blue-primary': '#608FD3'
+        'blue-primary': '#608FD3',
+        'purple-primary': '#4D3D79'
       },
     },
     fontFamily: {
-      'public-sans': ['Public Sans', 'sans-serif'],
+      'satoshi-regular': ['Satoshi Regular', 'sans-serif'],
     },
 
   },

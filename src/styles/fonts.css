@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Satoshi Regular';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('/fonts/Satoshi-Regular.woff') format('woff'),
+       url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  letter-spacing: -0.05em;
+}
+
+.font-instrument-serif {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+}
