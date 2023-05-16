@@ -159,7 +159,7 @@ export default function Home() {
 
             <div className="flex flex-col flex-start gap-6">
               <div className="font-instrument-serif-big">
-                <p>"I have hair problems"</p>
+                <p>&quot;I have hair problems&quot;</p>
               </div>
               <div className= 'flex flex-col md:flex-row items-start p-0 gap-10'>
                 <Card
@@ -182,7 +182,7 @@ export default function Home() {
 
             <div className="flex flex-col flex-start gap-6">
               <div className="font-instrument-serif-big">
-                <p>"I want to improve my silhouette"</p>
+                <p>&quot;I want to improve my silhouette&quot;</p>
               </div>
               <div className= 'flex flex-col md:flex-row items-start p-0 gap-10'>
                 <Card
@@ -198,14 +198,14 @@ export default function Home() {
                 <Card
                   className = "w-full md:w-1/3"
                   title = "Fat-Burner"
-                  description = "Boosts metabolism and aims to enhancefat burning."
+                  description = "Boosts metabolism and aims to enhance fat burning."
                 />
               </div>
             </div>
 
             <div className="flex flex-col flex-start gap-6">
               <div className="font-instrument-serif-big">
-                <p>"I want a healthier skin"</p>
+                <p>&quot;I want a healthier skin&quot;</p>
               </div>
               <div className= 'flex flex-col md:flex-row items-start p-0 gap-10'>
                 <Card
