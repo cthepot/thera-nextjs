@@ -6,7 +6,9 @@ interface CardHowToProps {
   stepId: number;
 }
 
-function CardHowto({ title, description, stepId }: CardHowToProps) {
+
+
+function CardHowTo({ title, description, stepId }: CardHowToProps) {
   return (
     <div className="flex flex-row lg:flex-col items-start p-5 border border-gray-300 w-full lg:w-1/2 h-64">
       <div className="flex flex-col gap-6">
@@ -25,4 +27,4 @@ function CardHowto({ title, description, stepId }: CardHowToProps) {
   );
 }
 
-export default CardHowto
+export default CardHowTo
