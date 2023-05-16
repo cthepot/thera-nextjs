@@ -13,7 +13,7 @@ export default function Home() {
     <main className={`flex min-h-screen flex-col items-center justify-between ${satoshiRegular}`}>
       <div className="w-full max-w-5xl py-16 px-4 lg:px-0 flex flex-col gap-20">
         <Navbar/>
-        <div className="flex lg:flex-row flex-col">
+        <div className="flex lg:flex-row flex-col gap-8">
           <div className= "flex flex-col gap-10">
             <div className= "flex flex-col gap-6 flex-start">
               <h1>
@@ -39,13 +39,13 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-column items-right">
-          <Image
-            src="/bottle.png"
-            alt="picture of a jar of health supplements with 'your label' on it"
-            className="w-full h-full object-contain"
-            width= {400}
-            height= {400}
-          />
+            <Image
+              src="/bottle.png"
+              alt="picture of a jar of health supplements with 'your label' on it"
+              className="w-full h-full object-contain"
+              width= {350}
+              height= {350}
+            />
           </div>
         </div>
       </div>
