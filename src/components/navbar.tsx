@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 function HeaderLink(props: { href: string; children: React.ReactNode }) {
 
-
   return (
     <a
       href={props.href}
@@ -33,11 +32,9 @@ export default function Navbar() {
           />
         </a>
         <nav className="flex items-center space-x-4">
-          <HeaderLink href="#organic-made-in-france-accredited">Certification</HeaderLink>
+          <HeaderLink href="#certification">Certification</HeaderLink>
           <HeaderLink href="#how-it-works">How it works</HeaderLink>
-          {/* <HeaderLink href="#health-supplements">Health supplements</HeaderLink>
-          <HeaderLink href="#contact">Contact</HeaderLink>*/}
-
+          <HeaderLink href="#health-supplements">Health supplements</HeaderLink>
         </nav>
       </div>
     </header>
