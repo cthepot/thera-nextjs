@@ -161,7 +161,7 @@ export default function Home() {
               <div className="font-instrument-serif-big">
                 <p>&quot;I have hair problems&quot;</p>
               </div>
-              <div className= 'flex flex-col md:flex-row items-start p-0 gap-10'>
+              <div className= 'flex flex-col md:flex-row items-stretch p-0 gap-10'>
                 <Card
                   className = "w-full md:w-1/3"
                   title = "Vitamin A & B"
@@ -184,7 +184,7 @@ export default function Home() {
               <div className="font-instrument-serif-big">
                 <p>&quot;I want to improve my silhouette&quot;</p>
               </div>
-              <div className= 'flex flex-col md:flex-row items-start p-0 gap-10'>
+              <div className= 'flex flex-col md:flex-row items-stretch p-0 gap-10'>
                 <Card
                   className = "w-full md:w-1/3"
                   title = "Branched-Chain Amino Acids"
@@ -207,7 +207,7 @@ export default function Home() {
               <div className="font-instrument-serif-big">
                 <p>&quot;I want a healthier skin&quot;</p>
               </div>
-              <div className= 'flex flex-col md:flex-row items-start p-0 gap-10'>
+              <div className= 'flex flex-col md:flex-row items-stretch p-0 gap-10'>
                 <Card
                   className = "w-full md:w-1/3"
                   title = "Acid hyaluronic"

@@ -10,7 +10,7 @@ interface CardHowToProps {
 
 function CardHowTo({ title, description, stepId }: CardHowToProps) {
   return (
-    <div className="flex flex-row lg:flex-col items-start p-5 border border-gray-300 w-full lg:w-1/2 h-64">
+    <div className="flex flex-row lg:flex-col items-start p-5 border border-gray-300 w-full lg:w-1/2 lg:h-64 items-strech">
       <div className="flex flex-col gap-6">
         <div className="flex flex-row items-center gap-2">
         <span className='ellipsis-8 rounded-full bg-purple-primary'/>
