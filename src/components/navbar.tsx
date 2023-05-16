@@ -16,7 +16,7 @@ function HeaderLink(props: { href: string; children: React.ReactNode }) {
 export default function Navbar() {
   return (
     <header className="w-full">
-      <div className="max-w-5xl mx-auto flex flex-col items-center justify-between">
+      <div className="max-w-5xl mx-auto flex items-center justify-between">
         <a
           href="/"
           className="flex items-center"
