@@ -31,7 +31,7 @@ export default function Navbar() {
             priority
           />
         </a>
-        <nav className="flex hidden sm:flex items-center space-x-4">
+        <nav className="hidden sm:flex items-center space-x-4">
           <HeaderLink href="#certification">Certification</HeaderLink>
           <HeaderLink href="#how-it-works">How it works</HeaderLink>
           <HeaderLink href="#health-supplements">Health supplements</HeaderLink>

@@ -15,6 +15,9 @@ module.exports = {
         'blue-primary': '#608FD3',
         'purple-primary': '#4D3D79'
       },
+      borderColor:{
+        'purple-primary': '#4D3D79',
+      },
     },
     fontFamily: {
       'satoshi': ['Satoshi-Regular', 'sans-serif'],
