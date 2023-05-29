@@ -40,7 +40,7 @@ const EmailForm = (): JSX.Element => {
           onClick={handleSendEmail}
           className="bg-purple-primary text-white py-4 px-6 rounded-full w-32 space-x-2.5"
         >
-          Let's chat!
+          Let&rsquo; chat!
         </button>
       </div>
       {error && <p className="text-red-500">{error}</p>}
