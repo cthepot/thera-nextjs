@@ -36,12 +36,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { email } = req.body;
 
   try {
+    console.log('Checking if email is in list');
     const emailInList = await isEmailInList(email);
+    console.log('Done checking if email is in list');
     if (emailInList) {
       return res.status(409).json({ error: 'Email already exists in the list' });
     }
 
+    console.log('Adding email to list');
     await addEmailToList(email);
+    console.log('Done adding email to list');
     res.status(200).json({ message: 'Email added successfully to the list' });
   } catch (error) {
     res.status(500).json({ error: 'An error occurred while processing your request' });
