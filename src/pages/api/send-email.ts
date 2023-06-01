@@ -1,36 +1,49 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import sgMail from '@sendgrid/mail';
+import axios from 'axios';
 
 const API_KEY = process.env.SENDGRID_API_KEY || '';
+const CONTACT_API_URL = 'https://api.sendgrid.com/v3/marketing/contacts';
 
-sgMail.setApiKey(API_KEY);
+const isEmailInList = async (email: string) => {
+  try {
+    const response = await axios.post(
+      `${CONTACT_API_URL}/search`,
+      { query: `email LIKE '${email}'` },
+      { headers: { Authorization: `Bearer ${API_KEY}` } }
+    );
 
-const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') {
-    const { email } = req.body;
-
-    // Validate email format
-    if (!email || !email.includes('@')) {
-      return res.status(400).json({ error: 'Invalid email address' });
-    }
-
-    try {
-      const msg = {
-        to: email,
-        from: 'contact@thera.gg',
-        subject: 'Hello from Thera!',
-        text: 'Hi there, I am Christopher founder at Thera! You can book a call on my calendar here https://calendly.com/thepot-christopher/30min. We can have a chat about how to start selling health supplements produced in France, in either English or French',
-      };
-
-      await sgMail.send(msg);
-      res.status(200).json({ message: 'Email sent successfully' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ error: 'Failed to send email' });
-    }
-  } else {
-    res.status(405).json({ error: 'Method Not Allowed' });
+    return response.data.contact_count > 0;
+  } catch (error) {
+    console.error('Error checking email in list:', error);
+    throw error;
   }
 };
 
-export default sendEmail;
+const addEmailToList = async (email: string) => {
+  try {
+    await axios.put(
+      `${CONTACT_API_URL}`,
+      { list_ids: [], contacts: [{ email }] },  // Insert your list_id(s) in list_ids array
+      { headers: { Authorization: `Bearer ${API_KEY}` } }
+    );
+  } catch (error) {
+    console.error('Error adding email to list:', error);
+    throw error;
+  }
+};
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const { email } = req.body;
+
+  try {
+    const emailInList = await isEmailInList(email);
+    if (emailInList) {
+      return res.status(409).json({ error: 'Email already exists in the list' });
+    }
+
+    await addEmailToList(email);
+    res.status(200).json({ message: 'Email added successfully to the list' });
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred while processing your request' });
+  }
+};

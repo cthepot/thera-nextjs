@@ -44,7 +44,7 @@ export default function Home() {
       </div>
 
 
-      <div className='w-full max-w-5xl px-4 py-16'>
+      <div className='w-full max-w-5xl px-4 py-5'>
         <div className = "flex flex-row gap items-center text-center justify-center font-instrument-serif mb-16 gap-2.5">
           <p> Made in France</p>
           <span className='ellipsis-4 rounded-full'/>
