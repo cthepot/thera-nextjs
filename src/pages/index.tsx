@@ -5,6 +5,7 @@ import CardImage from "../components/cardImage";
 import CardHowTo from "../components/cardHowTo";
 import CardHowToDisabled from "../components/cardHowTo";
 import Navbar from "../components/navbar";
+import EmailForm from "../components/emailForm";
 
 const satoshiRegular = 'font-satoshi-regular';
 
@@ -25,17 +26,9 @@ export default function Home() {
                 Pay only when sold, and we ship them directly to your fans.
               </p>
             </div>
-            <div>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScYP1JMfFryeiFxUrpYr8X8jFQgkFne1XcNPEqRNjtULoxCLQ/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="bg-purple-primary text-white py-4 px-6 flex flex-row items-center rounded-full space-x-2.5">
-                  <p className="font-weight-500">Get more information{' '}</p>
-                  <ArrowRightIcon className="h-5 w-5 ml-1"/>
-                </button>
-              </a>
+            <div className="">
+              <EmailForm />
+
             </div>
           </div>
           <div className="flex flex-column items-right">
@@ -51,7 +44,7 @@ export default function Home() {
       </div>
 
 
-      <div className='w-full max-w-5xl px-4 py-16'>
+      <div className='w-full max-w-5xl px-4 py-5'>
         <div className = "flex flex-row gap items-center text-center justify-center font-instrument-serif mb-16 gap-2.5">
           <p> Made in France</p>
           <span className='ellipsis-4 rounded-full'/>
