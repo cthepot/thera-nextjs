@@ -44,13 +44,13 @@ const EmailForm = (): JSX.Element => {
         />
         <button
           onClick={handleSendEmail}
-          className="bg-purple-primary text-white py-4 px-6 rounded-full w-32 space-x-2.5"
+          className="bg-purple-primary hover:bg-purple-primary-hover  text-white py-4 px-6 rounded-full w-32 space-x-2.5"
         >
           Let&apos;s chat!
         </button>
       </div>
       {message && (
-        <p className={`text-${message.type === 'success' ? 'green' : 'red'}-500`}>
+        <p className={message.type === 'success' ? 'text-green-500' : 'text-red-500'}>
           {message.content}
         </p>
       )}
