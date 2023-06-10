@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import Card from "../components/card";
 import CardImage from "../components/cardImage";
 import CardHowTo from "../components/cardHowTo";
@@ -151,14 +150,15 @@ export default function Home() {
           <div className = "flex flex-col gap-16">
             <div className = "flex flex-col gap-2.5">
               <h2 className="text-white" >
-              Your supplement<span className='font-satoshi-bold'> store</span>, built by us
+              Your supplement<span className='font-satoshi-bold'> store</span>, <br/>
+              built by us
               </h2>
               <p className="text-white">
               Focus on distributing your product, not building technical solutions. We design and build a store for you.
               </p>
             </div>
             <Image
-              src="/store-image.png"
+              src="/store-frame.png"
               alt="picture of a storefront with 4 products and price points"
               className="object-left w-full h-full object-contain"
               width= {900}
@@ -259,7 +259,7 @@ export default function Home() {
                 Contact
               </h2>
               <p className='text-white'>
-                Wanna know more? Share your email so that we can give you our full product catalogue.
+                Wanna know more? Share your email to have our full product catalogue.
               </p>
             </div>
             <EmailForm isBlack={true}/>

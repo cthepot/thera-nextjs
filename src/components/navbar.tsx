@@ -35,6 +35,7 @@ export default function Navbar() {
           <HeaderLink href="#certification">Certification</HeaderLink>
           <HeaderLink href="#how-it-works">How it works</HeaderLink>
           <HeaderLink href="#health-supplements">Health supplements</HeaderLink>
+          <HeaderLink href="#contact">Contact</HeaderLink>
         </nav>
       </div>
     </header>
