@@ -12,7 +12,7 @@ const satoshiRegular = 'font-satoshi-regular';
 export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between ${satoshiRegular}`}>
-      <div className="w-full max-w-5xl py-16 px-4 lg:px-0 flex flex-col gap-20">
+      <div className="w-full max-w-5xl py-20 px-4 lg:px-0 flex flex-col gap-20">
         <Navbar/>
         <div className="flex lg:flex-row flex-col gap-8">
           <div className= "flex flex-col gap-10">
@@ -27,7 +27,7 @@ export default function Home() {
               </p>
             </div>
             <div className="">
-              <EmailForm />
+              <EmailForm isBlack={false}/>
 
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function Home() {
       </div>
 
 
-      <div className='w-full max-w-5xl px-4 py-5'>
+      <div className='w-full max-w-5xl px-4 mb-20'>
         <div className = "flex flex-row gap items-center text-center justify-center font-instrument-serif mb-16 gap-2.5">
           <p> Made in France</p>
           <span className='ellipsis-4 rounded-full'/>
@@ -68,18 +68,18 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='w-full max-w-5xl py-16 px-4 lg:px-0'>
-        <div className=' mb-16'>
-          <h2 id="certification" className="mb-6">
+      <div className='w-full max-w-5xl py-20 px-4 lg:px-0 flex flex-col gap-16'>
+        <div className='flex flex-col gap-2.5'>
+          <h2 id="certification">
           Organic, made in France<br/>
           <span className='font-satoshi-bold'>& Certified</span>
           </h2>
           <p>
             Our ingredients are sourced following strict guidelines and high quality standards. <br/>
-            All our products produced in France and under organic French or European labels.
+            All of our products are produced in France and under organic French or European labels.
           </p>
         </div>
-        <div className='flex flex-col md:flex-row py-10 items-start p-0 gap-10'>
+        <div className='flex flex-col md:flex-row items-start p-0 gap-10'>
           <CardImage
             src = "/france.png"
             alt = "Made in France"
@@ -108,10 +108,16 @@ export default function Home() {
       </div>
 
 
-      <div  className='w-full max-w-5xl py-16 px-4 lg:px-0'>
-        <h2 id="how-it-works" className='mb-16'>
-        How it <span className='font-satoshi-bold'>works</span>
-        </h2>
+      <div  className='w-full max-w-5xl py-20 px-4 lg:px-0 flex flex-col gap-16'>
+        <div className="flex flex-col gap-2.5">
+          <h2 id="how-it-works">
+          How it <span className='font-satoshi-bold'>works</span>
+          </h2>
+          <p>
+            Customize health supplements and sell them under your own brand.<br/>
+            Pay only when sold, and we ship them directly to your fans.
+          </p>
+        </div>
         <div className = "flex flex-col items-start gap-10">
           <div className='flex flex-col lg:flex-row items-start gap-10'>
             <CardHowTo
@@ -140,16 +146,37 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='w-full max-w-5xl py-16 px-4 lg:px-0'>
-        <div className="mb-16">
-          <h2 className="mb-6" id="health-supplements">
-          Choose from a wide range of<br/>
-          <span className='font-satoshi-bold'>health supplements</span>
-          </h2>
+      <div className='w-full bg-purple-primary'>
+        <div className="max-w-5xl mx-auto py-20 px-4 lg:px-0">
+          <div className = "flex flex-col gap-16">
+            <div className = "flex flex-col gap-2.5">
+              <h2 className="text-white" >
+              We build <span className='font-satoshi-bold'>your store</span>
+              </h2>
+              <p className="text-white">
+              Focus on distributing your product, not building technical solutions
+              </p>
+            </div>
+            <Image
+              src="/store-image.png"
+              alt="picture of a storefront with 4 products and price points"
+              className="object-left w-full h-full object-contain"
+              width= {900}
+              height= {900}
+            />
+          </div>
         </div>
+      </div>
 
+      <div className='w-full max-w-5xl py-20 px-4 lg:px-0 flex flex-col gap-16'>
+        <div className="flex flex-col gap-2.5">
+          <h2 id="health-supplements">
+            Choose from a wide range of<br/>
+            <span className='font-satoshi-bold'>health supplements</span>
+          </h2>
+          <p>200 products available to sell under your own brand. Supplements from hair, nutrition, digestion,  stress, focus and more.</p>
+        </div>
         <div className= "flex flex-col flex-start gap-20">
-
             <div className="flex flex-col flex-start gap-6">
               <div className="font-instrument-serif-big">
                 <p>&quot;I have hair problems&quot;</p>
@@ -162,7 +189,7 @@ export default function Home() {
                 />
                 <Card
                   className = "w-full md:w-1/3"
-                  title = "Bear Yeast"
+                  title = "Beer Yeast"
                   description = "Makes hair and nails stronger thanks to its high nutritunial content."
                 />
                 <Card
@@ -180,7 +207,7 @@ export default function Home() {
               <div className= 'flex flex-col md:flex-row items-stretch p-0 gap-10'>
                 <Card
                   className = "w-full md:w-1/3"
-                  title = "Branched-Chain Amino Acids"
+                  title = "Branched-Chain Aminos"
                   description = "Essential for muscle growth and reducing exercise fatigue."
                 />
                 <Card
@@ -223,13 +250,17 @@ export default function Home() {
 
       </div>
 
-      {/*
-      <div className='w-full max-w-5xl py-16 px-4 lg:px-0'>
-        <h2 className="16 font-satoshi-bold" id="contact">
-        Contact
-        </h2>
+
+      <div className='w-full bg-purple-primary'>
+        <div className="max-w-5xl mx-auto py-20 px-4 lg:px-0">
+          <div className = "flex flex-col gap-6">
+            <h2 className="text-white " id="contact">
+            Contact
+            </h2>
+            <EmailForm isBlack={true}/>
+          </div>
+        </div>
       </div>
-  */}
 
       <div className="w-full bg-black">
         <div className="w-full max-w-5xl mx-auto">
