@@ -8,7 +8,11 @@ interface Message {
   type: MessageType;
 }
 
-const EmailForm = (): JSX.Element => {
+interface EmailFormProps {
+  isBlack?: boolean;
+}
+
+const EmailForm = ({ isBlack = false }: EmailFormProps): JSX.Element => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState<Message | null>(null);
 
@@ -32,6 +36,10 @@ const EmailForm = (): JSX.Element => {
     }
   };
 
+  const buttonClasses = isBlack
+    ? 'bg-black hover:bg-gray-900 text-white py-4 px-6 rounded-full w-32 space-x-2.5'
+    : 'bg-purple-primary hover:bg-purple-primary-hover text-white py-4 px-6 rounded-full w-32 space-x-2.5';
+
   return (
     <div className="flex flex-col">
       <div className="flex md:flex-row flex-col align-center gap-2">
@@ -44,7 +52,7 @@ const EmailForm = (): JSX.Element => {
         />
         <button
           onClick={handleSendEmail}
-          className="bg-purple-primary hover:bg-purple-primary-hover  text-white py-4 px-6 rounded-full w-32 space-x-2.5"
+          className={buttonClasses}
         >
           Let&apos;s chat!
         </button>
