@@ -151,10 +151,10 @@ export default function Home() {
           <div className = "flex flex-col gap-16">
             <div className = "flex flex-col gap-2.5">
               <h2 className="text-white" >
-              We build <span className='font-satoshi-bold'>your store</span>
+              Your supplement<span className='font-satoshi-bold'> store</span>, built by us
               </h2>
               <p className="text-white">
-              Focus on distributing your product, not building technical solutions
+              Focus on distributing your product, not building technical solutions. We design and build a store for you.
               </p>
             </div>
             <Image
@@ -253,10 +253,15 @@ export default function Home() {
 
       <div className='w-full bg-purple-primary'>
         <div className="max-w-5xl mx-auto py-20 px-4 lg:px-0">
-          <div className = "flex flex-col gap-6">
-            <h2 className="text-white " id="contact">
-            Contact
-            </h2>
+          <div className = "flex flex-col gap-8">
+            <div className ="flex flex-col gap-2.5">
+              <h2 className="text-white " id="contact">
+                Contact
+              </h2>
+              <p className='text-white'>
+                Wanna know more? Share your email so that we can give you our full product catalogue.
+              </p>
+            </div>
             <EmailForm isBlack={true}/>
           </div>
         </div>
