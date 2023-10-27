@@ -12,9 +12,21 @@ interface EmailFormProps {
   isBlack?: boolean;
 }
 
+interface AxiosErrorResponse {
+  response?: {
+    data: {
+      error: string;
+    };
+    status: number;
+  };
+  message: string;
+}
+
+
 const EmailForm = ({ isBlack = false }: EmailFormProps): JSX.Element => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState<Message | null>(null);
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -27,12 +39,27 @@ const EmailForm = ({ isBlack = false }: EmailFormProps): JSX.Element => {
       return;
     }
 
+    setIsLoading(true);
+
     try {
       const response = await axios.post('/api/send-email', { email });
-      setMessage({ content: response.data.message, type: response.data.status });
+
+      if (response.status === 200) {
+        // Assume success if we get a 200 OK response
+        setMessage({ content: response.data.message, type: 'success' });
+      } else {
+        // Any other status code is treated as an error
+        setMessage({ content: response.data.message, type: 'error' });
+      }
     } catch (error) {
-      console.error('Error sending email:', error);
-      setMessage({ content: 'Failed to process request', type: 'error' });
+      const axiosError = error as AxiosErrorResponse;
+      console.error('Error sending email:', axiosError);
+
+      // Check if a specific error message is returned from the server
+      let errorMessage = axiosError.response?.data?.error || 'Failed to process request';
+      setMessage({ content: errorMessage, type: 'error' });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -53,10 +80,12 @@ const EmailForm = ({ isBlack = false }: EmailFormProps): JSX.Element => {
         <button
           onClick={handleSendEmail}
           className={buttonClasses}
+          disabled={isLoading}
         >
           Let&apos;s chat!
         </button>
       </div>
+      {isLoading && <p className="text-gray-500">Processing...</p>}
       {message && (
         <p className={message.type === 'success' ? 'text-green-500' : 'text-red-500'}>
           {message.content}
